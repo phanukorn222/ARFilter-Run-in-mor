@@ -99,6 +99,13 @@ public class FaceAttachment : MonoBehaviour
         }
     } 
 
+    public void ChangeScene(string sceneName) {
+        arFaceManager.facesChanged -= OnFacesChanged;
+        SceneManager.LoadScene(sceneName);
+    }   
+
+    
+
     void OnEnable()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
@@ -107,6 +114,8 @@ public class FaceAttachment : MonoBehaviour
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         SendToFlutter.Send("scene_loaded");
+        arFaceManager = FindObjectOfType<ARFaceManager>();
+        arFaceManager.facesChanged += OnFacesChanged;
     }
 
     // called when the game is terminated

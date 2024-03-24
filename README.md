@@ -19,7 +19,7 @@ And you're good to go!
 2.Open project in unity  
 3.Go to ``File`` > ``Build Settings`` > ``Select Android Platform `` > ``Click Switch  Platform`` And tick ``Export Project``   
 4.Go to ``Flutter Embed`` > ``Export to flutter app (Android)``  
-5.Follow the instruction that shows on the screen
+5.Export the project to RUN-IN-CMU Folder by following the instruction that shows on the screen.
 
 Done!
 
